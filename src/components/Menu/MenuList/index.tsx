@@ -1,4 +1,4 @@
-import styles from "../MenuList.module.css";
+import styles from "./MenuList.module.css";
 
 type MenuListProps = React.HTMLAttributes<HTMLUListElement>;
 

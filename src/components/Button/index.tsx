@@ -2,16 +2,15 @@ import React from "react";
 import classNames from "classnames";
 import styles from "./Button.module.css";
 
-type BotaoProps = {
+type ButtonProps = {
   variant?: "primary" | "icon";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Botao: React.FC<BotaoProps> = ({
+const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   children,
   ...rest
 }) => {
-  
   const classMap = {
     primary: styles.primary,
     icon: styles.icon,
@@ -24,4 +23,4 @@ const Botao: React.FC<BotaoProps> = ({
   );
 };
 
-export default Botao;
+export default Button;

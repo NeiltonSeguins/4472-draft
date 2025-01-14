@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../SelectGroup.module.css";
+import styles from "./SelectGroup.module.css";
 
 interface SelectGroupProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {

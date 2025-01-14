@@ -1,12 +1,12 @@
 import Banner from "./components/Banner/index";
-// import Cabecalho from "./componentes/Cabecalho";
+import Header from "./components/Header";
 // import ListaDeCards from "./componentes/ListaDeCards";
 // import Newsletter from "./componentes/Newsletter";
 // import Rodape from "./componentes/Rodape";
 function App() {
   return (
     <>
-      {/* <Cabecalho /> */}
+      <Header />
       <Banner src="/banner.png" alt="Banner" />
       {/* <ListaDeCards /> */}
       <Banner src="/combo.png" alt="Combo" />

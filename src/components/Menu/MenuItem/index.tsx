@@ -1,14 +1,13 @@
 import Link from "../../Link";
 
 type MenuItemProps = {
-  item: string;
   href?: string | "#";
-};
+} & React.HTMLAttributes<HTMLLIElement>;
 
-const MenuItem = ({ item, href = "#" }: MenuItemProps) => {
+const MenuItem = ({ children, href = "#" }: MenuItemProps) => {
   return (
     <li>
-      <Link href={href}>{item}</Link>
+      <Link href={href}>{children}</Link>
     </li>
   );
 };
