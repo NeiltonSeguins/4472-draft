@@ -12,3 +12,13 @@ export interface Movie {
   genero: string;
   duracao: number;
 }
+
+export interface UseMoviesReturn {
+  movies: Movie[];
+  filteredMovies: Movie[];
+  searchTerm: string;
+  isLoading: boolean;
+  error: string | null;
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+  handleSearch: () => void;
+}
