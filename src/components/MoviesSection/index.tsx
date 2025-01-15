@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FieldSet from "../FieldSet";
 import styles from "./MovieSection.module.css";
 import MovieList from "../MovieList";
@@ -6,14 +6,26 @@ import { Movie } from "../../types";
 import InputText from "../InputText";
 import Button from "../Button";
 import { FaSearch } from "react-icons/fa";
-
-const movies: Movie[] = [
-  
-];
+import { getMovies } from "../../api/api";
 
 const MoviesSection = () => {
+  const [movies, setMovies] = useState<Movie[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [filteredMovies, setFilteredMovies] = useState<Movie[]>(movies);
+  const [filteredMovies, setFilteredMovies] = useState<Movie[]>([]);
+
+  const fetchMovies = async () => {
+    try {
+      const movies = await getMovies();
+      setMovies(movies);
+      setFilteredMovies(movies);
+    } catch (error) {
+      console.error("Erro ao buscar filmes:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchMovies();
+  }, []);
 
   const handleSearch = () => {
     const filtered = movies.filter((movie) =>

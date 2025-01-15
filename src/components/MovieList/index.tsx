@@ -9,8 +9,8 @@ interface MovieListProps {
 const MovieList = ({ movies }: MovieListProps) => {
   return (
     <ul className={styles.lista}>
-      {movies.map((movie, index) => (
-        <CardMovie key={index} {...movie} />
+      {movies.map((movie) => (
+        <CardMovie key={movie.id} {...movie} />
       ))}
     </ul>
   );
