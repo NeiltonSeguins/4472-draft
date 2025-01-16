@@ -19,7 +19,7 @@ const MoviesSection = () => {
   return (
     <main>
       <section className={styles.container}>
-        <FieldSet>
+        <FieldSet variant="secondary">
           <InputText
             value={searchTerm}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
