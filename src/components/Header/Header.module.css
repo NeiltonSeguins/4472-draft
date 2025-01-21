@@ -7,6 +7,10 @@
   padding: var(--padding-s) 0;
 }
 
+.menuitem {
+  list-style: none;
+}
+
 .icones {
   display: flex;
   gap: var(--gap-xl);

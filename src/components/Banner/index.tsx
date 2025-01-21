@@ -1,8 +1,6 @@
 import styles from "./Banner.module.css";
 
-type BannerProps = React.ImgHTMLAttributes<HTMLImageElement>;
-
-const Banner = ({ ...props }: BannerProps) => {
+const Banner = ({ ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => {
   return <img className={styles.banner} {...props} />;
 };
 

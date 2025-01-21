@@ -1,8 +1,6 @@
 import styles from "./MenuList.module.css";
 
-type MenuListProps = React.HTMLAttributes<HTMLUListElement>;
-
-const MenuList = ({ children }: MenuListProps) => {
+const MenuList = ({ children }: React.HTMLAttributes<HTMLUListElement>) => {
   return (
     <nav>
       <ul className={styles.navegacao}>{children}</ul>
