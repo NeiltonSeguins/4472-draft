@@ -4,17 +4,13 @@ import MovieList from "../MovieList";
 import InputText from "../InputText";
 import Button from "../Button";
 import { FaSearch } from "react-icons/fa";
-import { useMovies } from "../../hooks/useMovies";
+import { useFetchMovies } from "../../hooks/useFetchMovies";
+import { useFilterMovies } from "../../hooks/useFilteredMovies";
 
 const MoviesSection = () => {
-  const {
-    filteredMovies,
-    searchTerm,
-    isLoading,
-    error,
-    setSearchTerm,
-    handleSearch,
-  } = useMovies();
+  const { movies, isLoading, error } = useFetchMovies();
+  const { searchTerm, setSearchTerm, filteredMovies, handleSearch } =
+    useFilterMovies(movies);
 
   return (
     <main>
